@@ -29,12 +29,12 @@ class Owner
 
   #returns a collection of all the cats that belong to the owner 
   def cats
-
+    Cat.all.collect {|cat| cat.owner == self}
   end
 
   #returns a collection of all the dogs that belong to the owner
   def dogs 
-
+    Dog.all.collect {|dog| dog.owner == self}
   end
 
   #can buy a cat that is an instance of the Cat class
@@ -67,7 +67,7 @@ class Owner
 
   #can list off its pets
   def list_pets
-    
+
   end
 
 end
